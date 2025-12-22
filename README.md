@@ -46,9 +46,9 @@ Or use the `.exe` file.
 
 ### Manager Tab
 
-- Add new passwords with a name and value.
+- Add new passwords.
 - Generate random strong passwords with the "Generate Password" button.
-- Show/hide passwords and delete entries as needed.
+
 
 ### Passwords are encrypted
 
