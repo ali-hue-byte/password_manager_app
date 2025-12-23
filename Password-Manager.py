@@ -64,7 +64,7 @@ def start(fernet):
     main_button.destroy()
     main_label.destroy()
     main_Entry.destroy()
-    exit_btn.destroy()
+    
     JSON_FILE = "passwords.json"
 
 
