@@ -51,10 +51,13 @@ def check():
                 start(fernet)
     else:
 
-        with open(MASTER_FILE, "w") as f:
-            f.write(hashed)
-            fernet = KDF(main_Entry.get(), salt)
-            start(fernet)
+        if not main_Entry.get():
+            messagebox.showerror("Error", "Please enter a password")
+        else:
+            with open(MASTER_FILE, "w") as f:
+               f.write(hashed)
+               fernet = KDF(main_Entry.get(), salt)
+               start(fernet)
 
 
 def start(fernet):
