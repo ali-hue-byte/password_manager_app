@@ -61,12 +61,6 @@ Or use the `.exe` file.
 - All passwords are encrypted using Fernet symmetric encryption.
 - Never share your master password.
 
-## Screenshots
-<img width="1393" height="1051" alt="image" src="https://github.com/user-attachments/assets/bf0b2c26-807e-46a7-92c0-bbf79a0dbb6d" />
-
-<img width="1393" height="1048" alt="Screenshot 2025-12-23 105917" src="https://github.com/user-attachments/assets/6effe432-d70f-4d00-b78d-f74c9ce85bca" />
-
-
 ### Project Story
 
 This project started as a simple command-line password checker. The original goal was only to check if a password was strong enough. While working on it, I wanted more than just a CLI tool, so I added a graphical interface. Even then, the project did not feel very useful.
@@ -83,4 +77,12 @@ Because of this, I continued researching and learned about key derivation functi
 Finally, I needed a secure way to verify the master password. I learned about password hashing and implemented it so the application stores only a salted hash of the password, never the password itself.
 
 This project evolved by repeatedly questioning each solution and improving it, turning a simple idea into a more secure and practical application.
+
+## Screenshots
+<img width="1393" height="1051" alt="image" src="https://github.com/user-attachments/assets/bf0b2c26-807e-46a7-92c0-bbf79a0dbb6d" />
+
+<img width="1393" height="1048" alt="Screenshot 2025-12-23 105917" src="https://github.com/user-attachments/assets/6effe432-d70f-4d00-b78d-f74c9ce85bca" />
+
+
+
 
