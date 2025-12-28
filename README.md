@@ -61,7 +61,7 @@ Or use the `.exe` file.
 - All passwords are encrypted using Fernet symmetric encryption.
 - Never share your master password.
 
-### Project Story
+## Project Story
 
 This project started as a simple command-line password checker. The original goal was only to check if a password was strong enough. While working on it, I wanted more than just a CLI tool, so I added a graphical interface. Even then, the project did not feel very useful.
 
