@@ -67,3 +67,20 @@ Or use the `.exe` file.
 <img width="1393" height="1048" alt="Screenshot 2025-12-23 105917" src="https://github.com/user-attachments/assets/6effe432-d70f-4d00-b78d-f74c9ce85bca" />
 
 
+### Project Story
+
+This project started as a simple command-line password checker. The original goal was only to check if a password was strong enough. While working on it, I wanted more than just a CLI tool, so I added a graphical interface. Even then, the project did not feel very useful.
+
+I asked myself: what do I actually need from this project?
+I realized that instead of only checking passwords, I needed a way to *store my own passwords*. That is when I decided to turn the project into a password manager.
+
+After finishing this part, I showed the project to a friend. Instead of only liking the idea, he said he would actually use it. This made me think seriously about security. One question immediately came to my mind: what if someone gets access to the passwords file?
+
+To solve this, I started looking for ways to encrypt the data. I discovered the cryptography library and used it to encrypt the stored passwords. However, I soon realized a problem: encryption requires a secret key, and storing a static key would defeat the purpose if someone obtained it.
+
+Because of this, I continued researching and learned about key derivation functions (KDFs). I changed the design so the application asks the user for a master password at startup and derives the encryption key from it instead of storing one.
+
+Finally, I needed a secure way to verify the master password. I learned about password hashing and implemented it so the application stores only a salted hash of the password, never the password itself.
+
+This project evolved by repeatedly questioning each solution and improving it, turning a simple idea into a more secure and practical application.
+
