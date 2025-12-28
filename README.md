@@ -61,3 +61,9 @@ Or use the `.exe` file.
 - All passwords are encrypted using Fernet symmetric encryption.
 - Never share your master password.
 
+## Screenshots
+<img width="1393" height="1051" alt="image" src="https://github.com/user-attachments/assets/bf0b2c26-807e-46a7-92c0-bbf79a0dbb6d" />
+
+<img width="1393" height="1048" alt="Screenshot 2025-12-23 105917" src="https://github.com/user-attachments/assets/6effe432-d70f-4d00-b78d-f74c9ce85bca" />
+
+
