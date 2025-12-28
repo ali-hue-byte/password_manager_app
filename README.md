@@ -68,7 +68,7 @@ This project started as a simple command-line password checker. The original goa
 I asked myself: what do I actually need from this project?
 I realized that instead of only checking passwords, I needed a way to *store my own passwords*. That is when I decided to turn the project into a password manager.
 
-After finishing this part, I showed the project to a friend. Instead of only liking the idea, he said he would actually use it. This made me think seriously about security. One question immediately came to my mind: what if someone gets access to the passwords file?
+After finishing this part, I showed the project to a friend (adam). Instead of only liking the idea, he said he would actually use it. This made me think seriously about security. One question immediately came to my mind: what if someone gets access to the passwords file?
 
 To solve this, I started looking for ways to encrypt the data. I discovered the cryptography library and used it to encrypt the stored passwords. However, I soon realized a problem: encryption requires a secret key, and storing a static key would defeat the purpose if someone obtained it.
 
