@@ -39,6 +39,8 @@ def KDF(master_password,sal):
 def check():
     salt = SALT()
 
+
+
     hashed = hashlib.sha256(main_Entry.get().encode()+salt).hexdigest()
     if os.path.exists(MASTER_FILE):
 
@@ -50,11 +52,13 @@ def check():
                 fernet = KDF(main_Entry.get(), salt)
                 start(fernet)
     else:
-
-        with open(MASTER_FILE, "w") as f:
-            f.write(hashed)
-            fernet = KDF(main_Entry.get(), salt)
-            start(fernet)
+        if not main_Entry.get():
+            messagebox.showerror("Error", "Please enter a password")
+        else:
+            with open(MASTER_FILE, "w") as f:
+               f.write(hashed)
+               fernet = KDF(main_Entry.get(), salt)
+               start(fernet)
 
 
 def start(fernet):
@@ -64,7 +68,7 @@ def start(fernet):
     main_button.destroy()
     main_label.destroy()
     main_Entry.destroy()
-    exit_btn.destroy()
+
     JSON_FILE = "passwords.json"
 
 
@@ -306,7 +310,7 @@ def start(fernet):
 
 
 main_label = ctk.CTkLabel(app, text="Welcome to Password Manager", font=("Arial", 30, "bold"))
-main_label.pack(pady=100, anchor="center")
+main_label.pack(pady=70, anchor="center")
 
 MASTER_FILE = "master_password"
 SALT_FILE = "salt"
@@ -319,12 +323,12 @@ else:
     msg = "Create a password..."
 
 
+
 main_Entry = ctk.CTkEntry(app, placeholder_text=msg, show="*")
 main_Entry.pack(pady=30, anchor="center")
 main_button = ctk.CTkButton(app, text="Start application", command=check)
 main_button.pack( padx=10, pady=30, anchor ="center")
-exit_btn = ctk.CTkButton(app, text="Exit", command=exit)
-exit_btn.pack(padx=10, pady=10, anchor="center")
+
 
 
 
